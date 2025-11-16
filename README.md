@@ -1,45 +1,76 @@
-# videoCalling_chatApp
+# Video Calling & Chat App
 
-A real-time video calling and chat application built to enable seamless communication between users.
+A real-time video calling and chat application built using WebRTC, Socket.io, and Node.js.  
+Users can join rooms, start video calls, and chat instantly with a clean, responsive UI.
 
-## Features
+---
 
-- Video calling between users
-- Real-time chat functionality
-- User authentication
-- Responsive UI
+## 🚀 Live Demo  
+🔗 **Project Link:** https://video-calling-chat-app-black.vercel.app/
 
-## Technologies Used
+Anyone can open the above link and use the project.
 
-- Node.js
-- Socket.io
-- WebRTC
-- Express.js
-- React (if applicable)
+---
 
-## Getting Started
+## 📁 Project Structure
+videoCalling_chatApp/
+│
+├── frontend/ → React video call UI (Deployed on Vercel)
+└── backend/ → Node.js + Express + Socket.io signalling server(deploy render)
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Israr8957/videoCalling_chatApp.git
-   ```
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+---
 
-3. Start the server:
-   ```bash
-   npm start
-   ```
+## ✨ Features
+- 🎥 Real-time video calling (WebRTC)
+- 💬 Live chat messaging
+- 🔗 Multi-user conference support
+- 🔐 Username system (no login required)
+- 📱 Responsive UI
+- ⚡ Fast & lightweight signalling server
 
-4. Open the app in your browser:
-   ```
-   http://localhost:3000
-   ```
+---
 
-## Usage
+## 🛠️ Technologies Used
+### **Frontend**
+- React.js  
+- WebRTC  
+- Socket.io Client  
+- Material UI  
 
-- Register or login to your account.
-- Start a video call or chat with other users.
+### **Backend**
+- Node.js  
+- Express.js  
+- Socket.io  
+
+---
+
+# 🖥️ **Run the Project Locally**
+
+## ▶️ **1. Clone the Repository**
+```bash
+git clone https://github.com/Israr8957/videoCalling_chatApp.git
+cd videoCalling_chatApp
+
+▶️ 2. Run the Backend (Server)
+cd backend
+npm install
+npm run dev
+
+
+Server will start at:
+
+http://localhost:8000
+
+▶️ 3. Run the Frontend (React App)
+
+Open a second terminal:
+
+cd frontend
+npm install
+npm start
+
+
+Frontend will start at:
+
+http://localhost:3000
