@@ -1,61 +1,173 @@
 .meetVideoContainer {
-    position: relative;
-    height: 100vh;
-    background: rgb(1, 4, 48);
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center; /* center video when chat closed */
+  align-items: center;
+  background: rgb(1, 4, 48);
+  transition: all 0.3s ease;
+}
+
+.meetVideoContainer.chatOpen {
+  justify-content: flex-start; /* video moves left when chat open */
+  padding-left: 20px;
+}
+
+.fullScreenVideo {
+  height: 80vh;
+  width: 60vw;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.localVideoContainer {
+  transition: all 0.3s ease;
 }
 
 .meetUserVideo {
-    position: absolute;
-    bottom: 10vh;
-    height: 20vh;
-    width: auto;
-    left: 0;
-    border-radius: 20px;
-}
-
-.buttonContainers {
-    position: absolute;
-    width: 100vw;
-    bottom: 0;
-    text-align: center;
-}
-
-.buttonContainers svg {
-    font-size: 3rem;
-}
-
-.conferenceView { 
-
-    display: flex;
-    
-    padding: 10px;
-    gap: 10px;
-}
-
-.conferenceView  video {
-    width: 40vw;
-    height: 20vh;
-    min-width: 30vw;
-    border-radius: 10px;
+  height: 20vh;
+  width: auto;
+  border-radius: 20px;
+  position: relative;
 }
 
 .chatRoom {
-    position: absolute;
-    height: 90vh;
-    right: 0;
-    background: white;
-    border-radius: 10px;
-    width: 30vw;
-    padding-inline: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: white;
+  border-radius: 10px 0 0 10px;
+  width: 30vw;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.conferenceView {
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+}
+
+.buttonContainers {
+  position: absolute;
+  bottom: 10px; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.buttonContainers svg {
+  font-size: 3rem;
+}
+
+.conferenceView video {
+  width: 40vw;
+  height: 20vh;
+  min-width: 30vw;
+  border-radius: 10px;
+}
+
+.chatRoom {
+  margin-top: 40px;
+  margin-right: 40px;
+  position: absolute;
+  height: 85vh;
+  right: 0;
+  background: white;
+  border-radius: 10px;
+  width: 30vw;
+  padding-inline: 20px;
 }
 
 .chatContainer {
-    position: relative;
-    height: 100%;
+  position: relative;
+  height: 100%;
 }
-
 
 .chattingArea {
-    position: absolute;
-    bottom: 0;
+  display: flex;
+  gap: 0.5rem;
+  position: absolute;
+  bottom: 2px;
 }
+
+/* Enter in to lobby */
+
+.lobbyOuterContainer {
+  margin: 0;
+  height: 100vh;
+  background-color: #121212; 
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lobbyContainer {
+  gap: 1rem;
+  width: 40vw;
+  background-color: #282626;
+  padding:2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.lobbyContainer h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #b45f00;
+}
+
+.lobbyInputContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 0.5rem;
+}
+
+.textField {
+  width: 100%;
+  padding: 8px 14px;
+  border: 2px solid #D97500; /* custom border color */
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.textField:focus {
+  border-color: #D97500; /* focus border color */
+  box-shadow: 0 0 5px #D97500 /* glow effect */
+}
+.connectBtn {
+  width: 9rem;
+  padding: 10px 4px;
+  background: #D97500;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.connectBtn:hover {
+  background: #b45f00;
+  transform: scale(1.02);
+}
+
+.lobbyVideo {
+  margin-top: 2rem;
+  border: 2px solid #b45f00;
+  border-radius: 10px;
+  width: 35vw;
+}
+

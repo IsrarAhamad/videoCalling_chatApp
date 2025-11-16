@@ -76,7 +76,7 @@ export default function Authentication() {
                     sm={4}
                     md={7}
                     sx={{
-                        backgroundImage: 'url(https://source.unsplash.com/random?wallpapers)',
+                        backgroundImage: 'url(https://media.istockphoto.com/id/1221578901/vector/2fa-authentication-password-secure-notice-login-verification-or-sms-with-push-code-message.jpg?s=1024x1024&w=is&k=20&c=2CzoBMV8brqqWzmaB2cJkIecjXLx8ZDXWsJ-eHbvJXc=)',
                         backgroundRepeat: 'no-repeat',
                         backgroundColor: (t) =>
                             t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
