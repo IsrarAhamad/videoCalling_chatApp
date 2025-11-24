@@ -101,3 +101,116 @@
   height: auto;
   border-radius: 20px;
 }
+
+/* -------------------- MOBILE RESPONSIVE -------------------- */
+
+/* Small screens: 0 - 768px */
+@media (max-width: 768px) {
+  .landingPageContainer {
+    height: auto;
+    padding-bottom: 40px;
+  }
+
+  /* NAVBAR */
+  .landingPageContainer nav {
+    padding-inline: 1rem;
+    padding-block: 0.8rem;
+  }
+
+  .landingPageContainer nav h2 {
+    font-size: 1.4rem;
+  }
+
+  /* Hide desktop navlist */
+  .landingPageContainer nav .navlist {
+    display: none;
+  }
+
+  /* Mobile menu (your isOpen block) */
+  .landingPageContainer > div .navlist {
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem 1.5rem;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    width: 80%;
+    margin: 0.8rem auto;
+    font-size: 1rem;
+  }
+
+  .landingPageContainer > div .navHeader h2 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  /* HERO CONTENT */
+  .landingMainContainer {
+    flex-direction: column;
+    text-align: center;
+    padding-inline: 1rem;
+    height: auto;
+    margin-top: 2rem;
+  }
+
+  .landingMainContainer > div:nth-child(1) {
+    font-size: 1.4rem;
+  }
+
+  .landingMainContainer > div:nth-child(1) div[role="button"] {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Hero Mobile Image */
+  .landingMainContainer > div:nth-child(2) img {
+    height: 50vh;
+    margin-top: 2rem;
+  }
+}
+
+/* Very Small Devices - 0 to 480px */
+@media (max-width: 480px) {
+  .landingMainContainer > div:nth-child(1) {
+    font-size: 1.2rem;
+  }
+
+  .landingMainContainer > div:nth-child(1) div[role="button"] {
+    height: 40px;
+    width: 130px;
+  }
+
+  .landingMainContainer > div:nth-child(1) div[role="button"] a {
+    font-size: 1.1rem;
+  }
+
+  .landingMainContainer > div:nth-child(2) img {
+    height: 35vh;
+  }
+}
+
+.mobileNav{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  /* background-color: rgb(106, 108, 109); */
+
+}
+
+/* hamburger */
+.hamburger {
+  display: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Show hamburger only on mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
+

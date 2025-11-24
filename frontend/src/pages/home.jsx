@@ -21,14 +21,10 @@ function HomeComponent() {
 
     return (
         <>
-
-            <div className="navBar">
-
+         <div className="navBar">
                 <div style={{ display: "flex", alignItems: "center" }}>
-
                     <h2>Video Call</h2>
                 </div>
-
                 <div style={{ display: "flex", alignItems: "center" }}>
                     <IconButton onClick={
                         () => {
